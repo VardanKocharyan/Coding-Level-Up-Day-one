@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 void Rotate_array_right(int * p , int k , int size){
-	while(k >= size){
-			k -= size;
-	}
+	k = k % size;
+
 	int idx = 0;
 	while(idx < size - idx - 1){
 		p[idx] ^= p[size - idx - 1];
